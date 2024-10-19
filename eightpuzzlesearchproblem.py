@@ -246,7 +246,7 @@ def a_star_search(puzzle):
             new_puzzle = current_puzzle.result(move)
             new_path = path + [move]
             g_cost = len(new_path)  
-            h_cost = infinitenorm(new_puzzle)  
+            h_cost = manhattandistance(new_puzzle)  
             f_cost = g_cost + h_cost  
             frontier.put(f_cost, (new_puzzle, new_path)) 
     
